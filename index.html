@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Train Scheduler</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!-- Firebase UI CDN -->
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.0.0/firebaseui.css" />
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <div id="index-banner" class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <h1 class="header center white-text">Train Scheduler</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">A scheduler for train schedules that tracks when scheduled trains are scheduled to arrive since train schedulers are trained under a regularly scheduled training schedule to make sure they stick to the schedule.</h5>
+        </div>
+        <!-- <div class="row center"> </div> -->
+      </div>
+    </div>
+    <!-- <div class="parallax"><img src="assets/img/002_0374_w1440.jpg" alt="Unsplashed background img 2"></div> -->
+    <!-- <div class="parallax"><img src="assets/img/DJI_0017_w1440.jpg" alt="Unsplashed background img 3"></div> -->
+    <!-- <div class="parallax"><img src="assets/img/002_0296_w1440.jpg" alt="Unsplashed background img 3"></div> -->
+    <!-- <div class="parallax"><img src="assets/img/002_0296-bw2.jpg" alt="Unsplashed background img 3"></div> -->
+    <div class="parallax"><img src="assets/img/002_0296-bw3.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+<div class="container canvas-space">
+  <div class="section">
+    <div class="row">
+
+        <table id="schedule-target" class="bordered highlight centered responsive-table">
+          <thead>
+            <tr>
+              <th>Train Name</th>
+              <th>Destination</th>
+              <th>Frequency (min)</th>
+              <th>Next Arrival</th>
+              <th>Minutes Away</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+
+
+
+    </div>
+  </div>
+</div>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+  <div id="parallax-container-2" class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+        </div>
+      </div>
+    </div>
+    <!-- <div class="parallax"><img src="assets/img/002_0296_w1440.jpg" alt="Unsplashed background img 3"></div> -->
+    <!-- <div class="parallax"><img src="assets/img/DJI_0017_w1440.jpg" alt="Unsplashed background img 3"></div> -->
+    <div class="parallax"><img src="assets/img/002_0374_w1440.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+<!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+  <div class="container canvas-space">
+    <div class="section">
+
+      <div class="row">
+
+          <form>
+              <div class="input-field col s8 offset-s2">
+                <input id="train" placeholder="Hogwarts Express" type="text" class="validate">
+                <label for="train">Train Name</label>
+              </div>
+
+              <div class="input-field col s8 offset-s2">
+                <input id="destination" placeholder="Hogwarts" type="text" class="validate">
+                <label for="destination">Destination</label>
+              </div>
+
+              <div class="input-field col s8 offset-s2">
+                <input id="first-time" placeholder="09:34" type="text" class="validate">
+                <label for="first-time">First Train Military Time (hh:mm)</label>
+              </div>
+
+              <div class="input-field col s8 offset-s2">
+                <input id="freq" placeholder="60" type="text" class="validate">
+                <label for="freq">Frequency (minutes)</label>
+              </div>
+              
+              <div class="col s8 offset-s2">
+                <button id="submit" class="btn waves-effect waves-light" type="submit" name="action">Submit 
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+
+          </form>
+
+      </div>
+
+    </div>
+  </div>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+  <div id="parallax-container-3" class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+        </div>
+      </div>
+    </div>
+    <!-- <div class="parallax"><img src="assets/img/002_0295_w1440.jpg" alt="Unsplashed background img 3"></div> -->
+    <div class="parallax"><img src="assets/img/DJI_0017_w1440.jpg" alt="Unsplashed background img 3"></div>
+    <!-- <div class="parallax"><img src="assets/img/002_0374_w1440.jpg" alt="Unsplashed background img 2"></div> -->
+
+  </div>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="assets/js/materialize.js"></script>
+  <script src="assets/js/init.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<!-- firebase, firebase UI -->
+  <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.0.0/firebaseui.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  </body>
+</html>
